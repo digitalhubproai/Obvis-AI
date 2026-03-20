@@ -9,7 +9,7 @@
 
 **Your Personal AI Doctor - Available 24/7**
 
-[Setup Guide](SETUP_GUIDE.md) • [API Docs](API_DOCUMENTATION.md) • [Demo](#)
+[🔗 GitHub Repository](https://github.com/digitalhubproai/Obvis-AI) • [Setup Guide](SETUP_GUIDE.md) • [API Docs](API_DOCUMENTATION.md) • [Demo](#)
 
 </div>
 
