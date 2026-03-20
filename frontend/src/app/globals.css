@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Medical Professional Palette - Vibrant & Trustworthy */
+  --background: #ffffff;
+  --foreground: #0f172a;
+
+  /* Primary Medical Blue - Deep & Sophisticated */
+  --primary: #0f3d5c;
+  --primary-rgb: 15, 61, 92;
+
+  /* Secondary Teal - Modern & Clean */
+  --secondary: #0d9488;
+  --secondary-rgb: 13, 148, 136;
+
+  /* Accent Emerald - Fresh & Energetic */
+  --accent: #10b981;
+  --accent-rgb: 16, 185, 129;
+
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+
+  /* Premium Grays */
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  
+  --surface: #ffffff;
+  --surface-border: #e2e8f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-manrope), sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Background Effects */
+.bg-mesh {
+  background-color: #f8fafc;
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(#94a3b8 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.2;
+}
+
+@layer components {
+  /* Premium Medical Surfaces */
+  .glass-panel {
+    @apply backdrop-blur-2xl bg-white/70 border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] rounded-[2rem];
+  }
+
+  .premium-card {
+    @apply relative overflow-hidden bg-white border border-slate-100 rounded-[2.5rem] p-8 transition-all duration-500 hover:border-teal-500/30 hover:-translate-y-2;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+  }
+
+  .premium-card:hover {
+    box-shadow: 0 30px 60px -15px rgba(15, 61, 92, 0.1);
+  }
+
+  /* Professional Buttons */
+  .btn-premium {
+    @apply relative px-8 py-3.5 rounded-xl font-bold transition-all duration-300 active:scale-95 flex items-center justify-center gap-2;
+    background-color: var(--secondary);
+    color: white;
+    box-shadow: 0 4px 10px rgba(13, 148, 136, 0.25);
+  }
+
+  .btn-premium:hover {
+    @apply -translate-y-0.5;
+    background-color: #0f766e;
+    box-shadow: 0 8px 15px rgba(13, 148, 136, 0.4);
+  }
+
+  .btn-outline {
+    @apply relative px-8 py-3.5 rounded-xl font-bold border border-slate-200 bg-white transition-all duration-300 hover:border-slate-300 hover:bg-slate-50 text-slate-700 hover:-translate-y-0.5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+  }
+
+  .btn-outline:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Impactful Typography */
+  .text-title {
+    @apply font-extrabold tracking-tight leading-[1.1] text-slate-900;
+    font-family: var(--font-manrope), sans-serif;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-teal-800 to-emerald-600;
+  }
+
+  .badge-medical {
+    @apply px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.1em] border border-teal-100 bg-teal-50/50 text-teal-700;
+  }
+
+  /* Custom Input Styling */
+  .premium-input {
+    @apply w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:border-teal-500 focus:bg-white focus:ring-8 focus:ring-teal-500/5 outline-none transition-all duration-300 text-slate-900 placeholder:text-slate-400;
+  }
+}
+
+/* Micro-animations */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Animations */
+.reveal-text {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.orb {
+  @apply absolute rounded-full blur-[100px] pointer-events-none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f9ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border: 3px solid #f0f9ff;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
