@@ -29,7 +29,7 @@ const TypewriterText = ({ text, delay = 10, onComplete }: { text: string, delay?
   return <div className="whitespace-pre-wrap">{currentText}</div>;
 };
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://creativesar-obvis-ai.hf.space';
 
 interface Department {
   id: string;

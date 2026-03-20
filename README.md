@@ -6,10 +6,11 @@
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
 ![Python](https://img.shields.io/badge/Python-3.13-blue?style=for-the-badge&logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green?style=for-the-badge&logo=fastapi)
+![Deployed on Hugging Face](https://img.shields.io/badge/Deployed%20on-Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface)
 
 **Your Personal AI Doctor - Available 24/7**
 
-[🔗 GitHub Repository](https://github.com/digitalhubproai/Obvis-AI) • [Setup Guide](SETUP_GUIDE.md) • [API Docs](API_DOCUMENTATION.md) • [Demo](#)
+[🔗 GitHub Repository](https://github.com/digitalhubproai/Obvis-AI) • [🤗 Live Demo](https://huggingface.co/spaces/creativesar/Obvis_AI) • [Setup Guide](SETUP_GUIDE.md) • [API Docs](API_DOCUMENTATION.md)
 
 </div>
 
@@ -256,12 +257,16 @@ Obvis/
 OPENROUTER_API_KEY=sk_or_xxxxxxx
 DATABASE_URL=postgresql://user:pass@host:port/db?sslmode=require
 JWT_SECRET=your_secret_key
-ALLOWED_ORIGINS=http://localhost:3000
+ALLOWED_ORIGINS=http://localhost:3000,https://creativesar-obvis-ai.hf.space
 ```
 
 ### Frontend (.env.local)
 ```env
+# For local development:
 NEXT_PUBLIC_API_URL=http://localhost:8000
+
+# For Hugging Face production:
+NEXT_PUBLIC_API_URL=https://creativesar-obvis-ai.hf.space
 ```
 
 ---

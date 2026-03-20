@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import { downloadReport, ConsultationReport } from '@/utils/generateReport';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://creativesar-obvis-ai.hf.space';
 
 interface Message {
   id: number;
